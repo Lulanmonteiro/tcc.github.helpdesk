@@ -1,0 +1,773 @@
+
+ @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;800&family=Open+Sans:wght@300;400&family=Poppins:wght@300;400&display=swap');
+
+
+body {
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+    background-image: url(img/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+img {
+    max-width: 100%;
+    height: auto 0;
+}
+
+header {
+    text-align: center;
+    
+}
+
+.logo {
+    position: absolute;
+    width: 10%;
+    left: 49px;
+  }
+
+
+#menu-h {
+    background-color: #1a1925;
+    
+}
+
+#menu-h ul{
+    
+    padding: 0;
+    list-style: none;
+    max-width: 800px;
+    margin:0 auto;
+    background-color: #1a1925;
+}
+
+#menu-h ul li {
+    display: inline;
+    position: relative;
+    
+}
+
+#menu-h ul li a {
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    padding: 37px;
+    transition: color 0.5s;
+    font-size: larger;
+    background-color: #1a1925;
+}
+
+#menu-h ul li a:hover {
+  color: rgb(216, 103, 28);                                                                    
+}
+
+
+
+.sub-menu {
+    
+overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.2s ease-in-out;
+    position: absolute;
+}
+
+/* estilo para o sub-menu */
+#menu-h ul li .sub-menu {
+    display: block;
+    position: absolute;
+    top: 110%;
+    left: 0;
+    right: auto;
+    background-color: #1a1925;
+    padding: 2px;
+    width: 165px;
+    z-index: 1000;
+  }
+  
+  #menu-h ul li:hover .sub-menu {
+    padding: 0;
+    max-height: 200px;
+    transition: max-height 0.5s ease-in-out;
+  }
+  
+  #menu-h ul li:hover ul.sub-menu a {
+    font-size: 17px;
+    height: 30px;
+    margin: 0 auto;
+    padding: 35px;
+  }
+  
+  #menu-h ul li:hover ul.sub-menu a:hover {
+    font-size: 17px;
+    color: rgb(216, 103, 28) ;
+  }
+
+  .sub-menu-p {
+    
+    overflow: hidden;
+        max-height: 0;
+        transition: max-height 0.2s ease-in-out;
+        position: absolute;
+    }
+
+  #menu-h ul li .sub-menu-p {
+    display: block;
+    position: absolute;
+    top: 110%;
+    left: 0;
+    right: auto;
+    background-color: #1a1925;
+    padding: 2px;
+    width: 158px;
+    z-index: 1000;
+  }
+
+  #menu-h ul li:hover .sub-menu-p {
+    padding: 0;
+    max-height: 360px;
+    transition: max-height 0.5s ease-in-out;
+  }
+
+
+  #menu-h ul li:hover ul.sub-menu-p a {
+    font-size: 15px;
+    height: 45px;
+    margin: 0 auto;
+    padding: 18px;
+    margin-top: 17px;
+  }
+
+  
+  
+  #menu-h ul li:hover ul.sub-menu-p a:hover {
+    font-size: 15px;
+    color: rgb(216, 103, 28) ;
+  }
+
+
+h1 {
+    
+
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+}
+
+button[type="button"], button[type="submit"] {
+    background-color: #ff6600; 
+    color: #fff; 
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="button"]:hover, button[type="submit"]:hover {
+    background-color: #d8671c; 
+}
+
+
+a {
+    color: #1694e7; 
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline; 
+}
+
+.container-c {
+    padding: 20px;
+    width: 300px;
+    margin: 0 auto;
+    text-align: center;
+    box-shadow: 1px 1px 3px 1px black;
+    height: 530px;
+    
+    margin-top: 25px;
+}
+
+.container > h1 {
+    font-size: 24px;
+    font-family: 'Mulish', sans-serif;
+}
+
+
+.slider {
+    position: relative;
+    /* Outros estilos para o slider */
+}
+
+.slide {
+    position: relative;
+    text-align: center;
+    height: auto 0;
+    display: none;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 54px;
+    cursor: pointer;
+}
+
+.left-arrow {
+    left: 30px;
+}
+
+.right-arrow {
+    right: 30px;
+}
+
+
+form {
+    text-align: left;
+}
+
+input, select, button {
+    display: block;
+    margin: 15px 0;
+    width: 90%;
+    padding: 5px;
+    text-align: center;
+}
+
+button {
+    background-color: #ff6600;
+    color: #fff;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    margin: 0 auto;
+}
+
+button:hover {
+    background-color:#d8671c;
+}
+
+#button-desk {
+    background-color: #ff6600;
+    color: #ffffff;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    margin: 0 auto;
+}
+
+#button-desk:hover {
+
+    background-color: #d8671c;
+}
+
+
+
+#ticket-form {
+    display: none;
+    background-color: transparent;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 20px;
+}
+
+
+.visible {
+    display: block;
+}
+
+
+.hidden {
+    display: none;
+}
+
+
+ #show-ticket-form {
+    width: 550px;
+    border-radius: 8px;
+ }
+ 
+ form {
+    max-width: 600px; 
+    margin: 0 auto; 
+}
+
+
+.input-group {
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+
+.input-group label {
+    flex: 1;
+    text-align: right; 
+    margin-right: 10px; 
+}
+
+
+.input-group input,
+.input-group select {
+    flex: 2;
+    padding: 5px;
+    text-align: left;
+}
+
+.resizable-textarea {
+    flex: 2;
+    padding: 5px;
+    resize: vertical; 
+}
+
+
+button[type="submit"] {
+    margin-top: 10px; 
+}
+
+
+table {
+    border: 1px solid black;
+    padding: 3px;
+}
+
+tr {
+    padding: 5px;
+
+}
+
+td {
+    border: 2px solid black;
+}
+
+
+
+input[type="text"], textarea {
+    width: 88%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin: 0 auto;
+}
+
+#button-desk {
+    width: 30%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #ff6600;
+    color: #fff;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+#subject-text {
+    margin: 0 auto;
+    text-align: center;
+    padding: 10px;
+}
+
+#description-text {
+    margin: 0 auto;
+    text-align: center;
+    padding: 10px;
+}
+
+#register-role {
+    margin: 0 auto;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+#box-login-register {
+    padding: 20px;
+    width: 350px;
+    margin: 0 auto;
+    text-align: center;
+    box-shadow: 1px 1px 3px 1px black;
+    height: 530px;
+    float: right;
+    margin-right: 160px;
+    margin-top: 25px;
+    background-color: #fff;
+    border-radius: 5%;
+    height: auto;
+}
+
+#button-login {
+    margin: 0 auto;
+    padding: 10px;
+    width: 170px;
+    margin-bottom: 15px;
+    margin-top: 20px;
+}
+
+#button-register {
+    margin: 0 auto;
+    padding: 10px;
+    width: 170px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+#register-password {
+    margin: 0 auto;
+    padding: 6px;
+    margin-bottom: 10px;
+}
+
+#login-password {
+    margin: 0 auto;
+    padding: 6px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+#register-name {
+    margin: 0 auto;
+    padding: 6px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    width: 90%;
+}
+
+#register-email {
+    margin: 0 auto;
+    padding: 6px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    width: 90%;
+}
+
+#cpf {
+    margin: auto;
+    padding: 6px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    width: 90%;
+}
+
+
+
+#about {
+    background-color: transparent;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+    margin: 20px auto;
+    text-align: center;
+}
+
+#about h2 {
+    color: black;
+}
+
+#about p {
+    margin: 10px 0;
+    font-size: 16px;
+    display: inline;
+}
+
+#about h3 {
+    display: inline;
+}
+
+.about-container {
+    background-color: transparent;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+    margin: 20px auto;
+    text-align: center;
+    width: 80%; 
+    max-width: 1200px;
+}
+
+.box {
+    width: 200px;
+    margin: 30px 30px 0;
+    padding: 50px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease;
+    display: inline-block;
+    height: 350px;
+    vertical-align: top;
+}
+
+.box:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.box img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.caption {
+    margin-top: 10px;
+    padding: 20px;
+    font-weight: bold;
+    color: #d8671c;
+}
+
+#btn-servico {
+    margin-top: 10px;
+    background-color: #ff6600;
+    color: #fff;
+    padding: 5px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#btn-servico:hover {
+    background-color: #d8671c;
+}
+
+.contato {
+    margin: 0 auto;
+    padding: 10px;
+    display: flex;
+    margin-top: 25px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.5);
+    width: 700px;
+    height: auto;
+    margin-bottom: 0 auto;
+    border-radius: 6px;
+}
+
+.contato img {
+    height: 60px;
+}
+
+
+
+.contact-txt {
+    text-align: center;
+    font-size: 29px;
+}
+
+#fone-icon {
+    margin-right: 70px;
+    text-decoration: none;
+    color: black;
+    
+}
+
+#whatsapp-icon {
+    margin-right: 70px;
+    text-decoration: none;
+    color: black;
+    
+}
+
+#facebook-icon{
+    margin-right: 70px;
+    text-decoration: none;
+    color: black;
+    
+}
+
+#email-icon {
+    margin-right: 70px;
+    text-decoration: none;
+    color: black;
+   
+}
+
+#x-icon {
+    margin-right: 20px;
+    text-decoration: none;
+    color: black;
+    
+}
+
+
+.container-footer {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+footer {
+    position: relative;
+    background-color: #1a1925;
+    padding: 50px 0;
+    bottom: 0;
+ 
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Alinhar verticalmente ao topo */
+    flex-wrap: wrap;
+}
+
+.footer-logo {
+    flex: 1;
+}
+
+.footer-logo img {
+    max-width: 70%;
+    height: auto;
+}
+
+.footer-section {
+    flex: 1;
+    margin-top: 20px;
+    margin-right: 20px; /* Adicionar um espaçamento entre as seções */
+}
+
+.footer-links ul,
+.footer-social ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links a{
+    text-decoration: underline;
+    margin-left: 90px;
+    color: #fff;
+}
+
+#links-principal {
+    text-decoration: underline;
+    color: #fff;
+    margin-right: 80px;
+}
+
+.footer-social a {
+    text-decoration: none;
+    color: #fff;
+    margin-left: 50px;
+}
+
+.footer-info h3, .footer-links h3, .footer-social h3 {
+color: #ff6600;
+}
+
+.footer-info p {
+    color: #fff;
+    margin-left: 22px;
+}
+
+.footer-social img {
+    max-width: 50%;
+    height: 35px;
+    padding: 0;
+    margin-right: 10px;
+}
+
+.footer-social ul {
+    display: inline-flex;
+    padding: 0;
+    margin: 0;
+}
+
+.copyright {
+    position: absolute;
+     text-align: center;
+     align-items: center;
+     bottom: 0;
+     left: 0;
+     color: #ffffff;
+     width: 100%;
+     font-size: 12px;
+}
+
+.privacy-link {
+    color: #ffffff;
+    margin-right: 20px; 
+    margin-bottom: 8px;
+    text-decoration: none; 
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 10px;
+}
+.terms-link {
+    color: #ffffff;
+    margin-right: 160px; 
+    margin-bottom: 8px;
+    text-decoration: none; 
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 10px;
+}
+
+#ticket-item {
+    display: table;
+    width: auto 0;
+    border: 1px solid #ccc;
+    margin: 10px 0;
+    padding: 10px;
+    align-items: center;
+}
+
+/* Estilos para as células da "tabela" */
+#ticket-item p {
+    display: table-cell;
+    padding: 5px;
+    border-right: 1px solid #ccc;
+}
+
+/* Estilos para a última célula para remover a borda direita */
+
+
+/* Estilos para os títulos dentro do elemento li */
+#ticket-item p strong {
+    font-weight: bold;
+}
+
+.delete-button {
+    background-color: #d8671c;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+
+#social-inicial {
+    display: flex;
+    padding: 10px;
+    text-align:center;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 10px;
+}
+
+#social-inicial img {
+    width: auto 0;
+    height: 90px;
+    margin: 30px;
+}
+
+
+

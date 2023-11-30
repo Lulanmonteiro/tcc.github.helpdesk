@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="img/icon.png">
+    <script src="script.js"></script>
+    <title>HelpPro</title>
+</head>
+<body style="background-image: url(img/Banner.jpg); background-size: cover; background-repeat: no-repeat;">
+    <div id="box-login-register">
+        <div id="login-form">
+            <h2>Login</h2>
+            <form action="" method="post">
+                <input type="text" placeholder="Email" name="username" id="login-email" required>
+                <input type="password" placeholder="Senha" name="password" id="login-password" required>
+                <button id="button-login" type="submit">Entrar</button>
+            </form>
+        </div>
+        <div id="register-form">
+            <h2>Registro</h2>
+            <form id="register" method="post" action="">
+                <input type="text" placeholder="Nome" name="name" id="register-name" required>
+                <input type="text" placeholder="Email" name="email" id="register-email" required>
+                <input type="password" placeholder="Senha" name="password" id="register-password" required>
+                <input type="text" placeholder="CPF" name="cpf" id="cpf"required>
+                
+                <button id="button-register" type="submit">Registrar</button>
+            </form>
+        </div>
+    </div>
+ 
+    <script>document.addEventListener("DOMContentLoaded", function() {
+        // Função para redirecionar para a página "index.html"
+        function redirectToIndex() {
+            window.location.href = "index.html";
+        }
+    
+        // Adiciona um ouvinte de eventos ao botão de login
+        var loginButton = document.getElementById("button-login");
+        if (loginButton) {
+            loginButton.addEventListener("click", function(event) {
+                event.preventDefault();
+                var email = document.getElementById("login-email").value;
+                var password = document.getElementById("login-password").value;
+    
+                if (email && password) {
+                    redirectToIndex();
+                } else {
+                    alert("Por favor, preencha todos os campos.");
+                }
+            });
+        }
+    
+        // Adiciona um ouvinte de eventos ao botão de registro
+        var registerButton = document.getElementById("button-register");
+        if (registerButton) {
+            registerButton.addEventListener("click", function(event) {
+                event.preventDefault();
+                var name = document.getElementById("register-name").value;
+                var email = document.getElementById("register-email").value;
+                var password = document.getElementById("register-password").value;
+                var cpf = document.getElementById("cpf").value;
+    
+                if (name && email && password && cpf) {
+                    redirectToIndex();
+                } else {
+                    alert("Por favor, preencha todos os campos.");
+                }
+            });
+        }
+    });
+    </script>
+</body>
+</html>

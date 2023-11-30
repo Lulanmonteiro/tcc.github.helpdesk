@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="img/icon.png">
+    <title>Painel - HelpPro</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <img class="logo" height="118px" src="img/logo.png" alt="Logo">
+        <nav id="menu-h">
+            <ul>
+                <li class="menu-item"><a href="index.html">Início</a></li>
+                <li class="menu-item"><a href="servicos.html">Serviços</a>
+                </li>
+                <li class="menu-item"><a href="Contatos.html">Contato</a>
+                    <ul class="sub-menu">
+                        <li>
+                            <a href="Contatos.html">Entre em Contato</a>
+                            <a href="sobre.html">Sobre Nós</a>
+                        </li>
+                        </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+
+    
+    
+    <canvas id="barChart" width="400" height="200"></canvas>
+
+
+
+
+    <script>document.addEventListener('DOMContentLoaded', function() {
+        const ctx = document.getElementById('barChart').getContext('2d');
+        
+        const data = {
+    labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+    datasets: [{
+        label: 'Example Data',
+        data: [12, 19, 3, 5, 2, 3],
+        backgroundColor: [
+            'rgba(255, 99, 132, 0.2)',
+            'rgba(54, 162, 235, 0.2)',
+            'rgba(255, 206, 86, 0.2)',
+            'rgba(75, 192, 192, 0.2)',
+            'rgba(153, 102, 255, 0.2)',
+            'rgba(255, 159, 64, 0.2)'
+        ], // Define cores de fundo para cada barra
+        borderColor: [
+            'rgba(255, 99, 132, 1)',
+            'rgba(54, 162, 235, 1)',
+            'rgba(255, 206, 86, 1)',
+            'rgba(75, 192, 192, 1)',
+            'rgba(153, 102, 255, 1)',
+            'rgba(255, 159, 64, 1)'
+        ],
+        borderWidth: 1
+    }]
+};
+    
+        const myChart = new Chart(ctx, {
+            type: 'bar',
+            data: data
+
+            
+        });
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+    // ... código do gráfico ...
+
+    // Solicita dados do servidor
+    fetch('/chart-data')
+        .then(response => response.json())
+        .then(data => {
+            // Atualiza os dados do gráfico com os dados recebidos
+            myChart.data.datasets[0].data = data;
+            myChart.update();
+        });
+});
+
+    </script>
+    
+
+
+    </body>
+    </html>

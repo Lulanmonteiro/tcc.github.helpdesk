@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=960, initial-scale=1.0, maximum-scale=2.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="img/icon.png">
+    <title>Sistema de Help Desk</title>
+</head>
+<body>
+
+
+    <header>
+        <img class="logo" height="118px" src="img/logo.png" alt="Logo">
+        <nav id="menu-h">
+            <ul>
+                <li class="menu-item"><a href="index.html">Início</a></li>
+                <li class="menu-item"><a href="servicos.html">Serviços</a>
+                </li>
+                <li class="menu-item"><a href="Contatos.html">Contato</a>
+                    <ul class="sub-menu">
+                        <li>
+                            <a href="Contatos.html">Entre em Contato</a>
+                            <a href="sobre.html">Sobre Nós</a>
+                        </li>
+                        </ul>
+                </li>
+            </ul>
+        </nav>
+
+
+      </header>
+      <br><br>
+      <h1>Sistema HelpDesk</h1>
+      <br><br><br>
+
+      <main>
+        <button id="show-ticket-form">Criar Chamado</button>
+        <section id="ticket-form" class="hidden">
+            <h2>Preencha os Detalhes do Chamado</h2>
+            <form id="create-ticket-form">
+                <div class="input-group">
+                        <label for="organization">Organização:</label>
+                        <input type="text" id="organization" name="organization" required>
+                    </div>
+                    <br>
+                    <div class="input-group">
+                        <label for="creator">Criador:</label>
+                        <input type="text" id="creator" name="creator" required>
+                    </div>
+                    <br>
+                    <div class="input-group">
+                        <label for="description">Descrição:</label>
+                        <textarea id="description" name="description" class="resizable-textarea" rows="4" required></textarea>
+                    </div>
+                    <br>
+                    <div class="input-group">
+                        <label for="department">Setor:</label>
+                        <input type="text" id="department" name="department" required>
+                    </div>
+                    <br>
+                    <div class="input-group">
+                        <label for="assignee">Cessionário:</label>
+                        <input type="text" id="assignee" name="assignee" required>
+                    </div>
+                    <br>
+                    <div class="input-group">
+                        <label for="priority">Prioridade:</label>
+                        <select id="priority" name="priority" required>
+                            <option value="alta">Alta</option>
+                            <option value="média">Média</option>
+                            <option value="baixa">Baixa</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="category">Categoria:</label>
+                        <select id="category" name="category" required>
+                            <option value="impressora">Impressora</option>
+                            <option value="hardware">Hardware</option>
+                            <option value="software">Software</option>
+                            <option value="internet">Internet</option>
+                            <option value="manutencao">Manutenção</option>
+                            <option value="email">E-mail</option>
+                        </select>
+                    </div>
+
+                        <div class="input-group">
+                        <label for="additionalAssignee">Cessionário Adicional (opcional):</label>
+                        <input type="text" id="additionalAssignee" name="additionalAssignee">
+                    </div>
+                    <br>
+                        <button type="submit">Criar Chamado</button>
+                    </form>
+        </section>
+        <ul id="ticket-list"></ul>
+    </main>
+
+    
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
